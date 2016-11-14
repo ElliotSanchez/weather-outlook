@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4DDCEB91DDA54D90020E9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDCEB81DDA54D90020E9EB /* AppDelegate.swift */; };
+		F4DDCEBB1DDA54D90020E9EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDCEBA1DDA54D90020E9EB /* ViewController.swift */; };
+		F4DDCEBE1DDA54DA0020E9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DDCEBC1DDA54DA0020E9EB /* Main.storyboard */; };
+		F4DDCEC01DDA54DA0020E9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4DDCEBF1DDA54DA0020E9EB /* Assets.xcassets */; };
+		F4DDCEC31DDA54DA0020E9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DDCEC11DDA54DA0020E9EB /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F4DDCEB51DDA54D90020E9EB /* weather-outlook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-outlook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DDCEB81DDA54D90020E9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4DDCEBA1DDA54D90020E9EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4DDCEBD1DDA54DA0020E9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4DDCEBF1DDA54DA0020E9EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4DDCEC21DDA54DA0020E9EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4DDCEC41DDA54DA0020E9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4DDCEB21DDA54D90020E9EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4DDCEAC1DDA54D90020E9EB = {
+			isa = PBXGroup;
+			children = (
+				F4DDCEB71DDA54D90020E9EB /* weather-outlook */,
+				F4DDCEB61DDA54D90020E9EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4DDCEB61DDA54D90020E9EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDCEB51DDA54D90020E9EB /* weather-outlook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4DDCEB71DDA54D90020E9EB /* weather-outlook */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDCEB81DDA54D90020E9EB /* AppDelegate.swift */,
+				F4DDCEBA1DDA54D90020E9EB /* ViewController.swift */,
+				F4DDCEBC1DDA54DA0020E9EB /* Main.storyboard */,
+				F4DDCEBF1DDA54DA0020E9EB /* Assets.xcassets */,
+				F4DDCEC11DDA54DA0020E9EB /* LaunchScreen.storyboard */,
+				F4DDCEC41DDA54DA0020E9EB /* Info.plist */,
+			);
+			path = "weather-outlook";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4DDCEB41DDA54D90020E9EB /* weather-outlook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4DDCEC71DDA54DA0020E9EB /* Build configuration list for PBXNativeTarget "weather-outlook" */;
+			buildPhases = (
+				F4DDCEB11DDA54D90020E9EB /* Sources */,
+				F4DDCEB21DDA54D90020E9EB /* Frameworks */,
+				F4DDCEB31DDA54D90020E9EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "weather-outlook";
+			productName = "weather-outlook";
+			productReference = F4DDCEB51DDA54D90020E9EB /* weather-outlook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4DDCEAD1DDA54D90020E9EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = notungood;
+				TargetAttributes = {
+					F4DDCEB41DDA54D90020E9EB = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KNYX5GL2V8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F4DDCEB01DDA54D90020E9EB /* Build configuration list for PBXProject "weather-outlook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4DDCEAC1DDA54D90020E9EB;
+			productRefGroup = F4DDCEB61DDA54D90020E9EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4DDCEB41DDA54D90020E9EB /* weather-outlook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4DDCEB31DDA54D90020E9EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4DDCEC31DDA54DA0020E9EB /* LaunchScreen.storyboard in Resources */,
+				F4DDCEC01DDA54DA0020E9EB /* Assets.xcassets in Resources */,
+				F4DDCEBE1DDA54DA0020E9EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4DDCEB11DDA54D90020E9EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4DDCEBB1DDA54D90020E9EB /* ViewController.swift in Sources */,
+				F4DDCEB91DDA54D90020E9EB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4DDCEBC1DDA54DA0020E9EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4DDCEBD1DDA54DA0020E9EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4DDCEC11DDA54DA0020E9EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4DDCEC21DDA54DA0020E9EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4DDCEC51DDA54DA0020E9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4DDCEC61DDA54DA0020E9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4DDCEC81DDA54DA0020E9EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KNYX5GL2V8;
+				INFOPLIST_FILE = "weather-outlook/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notungood.weather-outlook";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F4DDCEC91DDA54DA0020E9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KNYX5GL2V8;
+				INFOPLIST_FILE = "weather-outlook/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notungood.weather-outlook";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4DDCEB01DDA54D90020E9EB /* Build configuration list for PBXProject "weather-outlook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4DDCEC51DDA54DA0020E9EB /* Debug */,
+				F4DDCEC61DDA54DA0020E9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4DDCEC71DDA54DA0020E9EB /* Build configuration list for PBXNativeTarget "weather-outlook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4DDCEC81DDA54DA0020E9EB /* Debug */,
+				F4DDCEC91DDA54DA0020E9EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4DDCEAD1DDA54D90020E9EB /* Project object */;
+}
