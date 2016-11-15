@@ -34,7 +34,41 @@ class ViewController: UIViewController {
             }
         }
  */
-        print("nothing happens when tapped")
+        
+        if let myURL = getURLFromInput() {
+            var message = ""
+            
+            let myRequest = NSMutableURLRequest(url: myURL)
+            
+            let myTask = URLSession.shared.dataTask(with: myRequest as URLRequest) { data, response, error in
+                if error != nil {
+                    print(error!)
+                } else {
+                    
+                    if let unwrappedData = data {
+                        
+                        if let dataNSString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue) {
+                            
+                            message = self.getForecastFromData(dataNSString: dataNSString)
+                            
+                        }
+                    }
+                }
+                
+                if message == "" {
+                    message = "The weather there couldn't be found, please try again."
+                }
+                
+                DispatchQueue.main.async(execute: {
+                    self.weatherDescription.text = message
+                })
+            }
+            myTask.resume()
+                
+        } else {
+            weatherDescription.text = "Couldn't get valid location."
+        }
+
     }
     
     
@@ -43,59 +77,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var message = ""
-        
-        let myURL = URL(string: "http://www.weather-forecast.com/locations/London/forecasts/latest")
-        
-        let myRequest = NSMutableURLRequest(url: myURL!)
-        
-        let myTask = URLSession.shared.dataTask(with: myRequest as URLRequest) { data, response, error in
-            if error != nil {
-                print(error!)
-            } else {
-                
-                if let unwrappedData = data {
-                    let dataNSString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
-                    var separatorString = "3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">" // code directly before forecast
-                    
-                    if let contentArray = dataNSString?.components(separatedBy: separatorString) {
-                        
-                        if contentArray.count > 0 {
-                            separatorString = "</span>" // update value to reflect code immediately after forecast
-                            let newContentArray = contentArray[1].components(separatedBy: separatorString)
-                            if newContentArray.count > 0 {
-                                message = newContentArray[0].replacingOccurrences(of: "&deg;", with: "°")
-                                print(message)
-                            }
-                        }
-                    }
-                }
-            }
-            
-            if message == "" {
-                message = "The weather there couldn't be found, please try again."
-            }
-            
-            DispatchQueue.main.async(execute: {
-                self.weatherDescription.text = message
-            })
-        }
-        myTask.resume()
     }
     
-    /*
-    func createURLFromInput(input: String) -> URL? {
-        let newNSStringInput = NSString(string: input)
-        newNSStringInput.replacingOccurrences(of: " ", with: "-")
-        let newURLString = frontURLString + (newNSStringInput as String) as String + backURLString
-        if let returnURL = URL(string: newURLString) {
-            return returnURL
-        } else {
-            print ("error getting url from input")
+    
+    func getURLFromInput() -> URL? {
+        
+        if (textField.text?.isEmpty)! {
             return nil
         }
+        
+        let frontURLString = "http://www.weather-forecast.com/locations/"
+        let backURLString = "/forecasts/latest"
+        
+        if let newStringInput = textField.text?.replacingOccurrences(of: " ", with: "-") {
+            let newURLString = frontURLString + newStringInput + backURLString
+            if let returnURL = URL(string: newURLString) {
+                return returnURL
+            } else { return nil }
+        } else { return nil }
     }
     
+     /*
     func getWeatherData(url: URL) -> String? {
         let request = NSMutableURLRequest(url: url)
         var dataNSString = NSString()
@@ -116,11 +118,25 @@ class ViewController: UIViewController {
         }
         task.resume()
     }
-    
-    func getForecastFromData(rawData: String) -> String? {
-        
+    */
+    func getForecastFromData(dataNSString: NSString) -> String {
+        if dataNSString.contains("The page you were looking for doesn't exist (404)") {
+            return "Not a valid location."
+        } else {
+            var separatorString = "3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">" // code directly before forecast
+            
+            let contentArray = dataNSString.components(separatedBy: separatorString)
+            if contentArray.count > 0 {
+                separatorString = "</span></span></span>" // update value to reflect code immediately after forecast
+                let newContentArray = contentArray[1].components(separatedBy: separatorString)
+                if newContentArray.count > 0 {
+                    return newContentArray[0].replacingOccurrences(of: "&deg;", with: "°") as String
+                }
+            }
+            return ""
+        }
     }
-    
+    /*
     func displayWeatherDescription(webForecast: String) {
         weatherDescription.text = webForecast
     }

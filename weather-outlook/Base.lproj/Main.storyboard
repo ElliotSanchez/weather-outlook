@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-pV-c8c">
-                                <rect key="frame" x="16" y="70" width="343" height="245"/>
+                                <rect key="frame" x="16" y="70" width="343" height="349.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Outlook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-L7-6hn">
                                         <rect key="frame" x="107" y="0.0" width="129" height="20.5"/>
@@ -33,28 +33,35 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="skA-pF-q7M">
-                                        <rect key="frame" x="61.5" y="70.5" width="220" height="30"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="343" height="34.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="skA-pF-q7M" secondAttribute="height" multiplier="22:3" id="QwY-jS-P3k"/>
+                                            <constraint firstAttribute="width" secondItem="skA-pF-q7M" secondAttribute="height" multiplier="10:1" id="jzT-O2-D0m"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-YM-c6N">
-                                        <rect key="frame" x="128" y="150.5" width="87" height="30"/>
+                                        <rect key="frame" x="128" y="155" width="87" height="30"/>
                                         <state key="normal" title="Get Weather"/>
                                         <connections>
                                             <action selector="getWeatherTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBC-d3-kpW"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weather description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-Ye-G8I">
-                                        <rect key="frame" x="115.5" y="230.5" width="112.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-Ye-G8I">
+                                        <rect key="frame" x="0.0" y="235" width="343" height="114.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Wne-Ye-G8I" secondAttribute="height" multiplier="3:1" id="DJn-pE-qOQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="skA-pF-q7M" secondAttribute="trailing" id="IDk-2H-z89"/>
+                                    <constraint firstItem="skA-pF-q7M" firstAttribute="leading" secondItem="eX6-pV-c8c" secondAttribute="leadingMargin" id="kxb-XC-kWx"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
