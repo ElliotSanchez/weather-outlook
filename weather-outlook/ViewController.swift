@@ -19,24 +19,12 @@ class ViewController: UIViewController {
 
     
     @IBAction func getWeatherTapped(_ sender: Any) {
-        /*
-        if let userInput = textField.text {
-            if let userURL = createURLFromInput(input: userInput) {
-                if let rawHTMLString = getWeatherData(url: userURL) {
-                    DispatchQueue.main.sync(execute: {
-                        if let webForecastString = getForecastFromData(rawData: rawHTMLString) {
-                            displayWeatherDescription(webForecast: webForecastString)
-                        } else {
-                            print("couldn't get data from web")
-                        }
-                    })
-                }
-            }
-        }
- */
+
+        var message: String? = nil
         
         if let myURL = getURLFromInput() {
-            var message = ""
+            
+            //getRawNSStringFromURL(url: myURL)
             
             let myRequest = NSMutableURLRequest(url: myURL)
             
@@ -49,26 +37,24 @@ class ViewController: UIViewController {
                         
                         if let dataNSString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue) {
                             
-                            message = self.getForecastFromData(dataNSString: dataNSString)
+                            if self.getForecastFromRawNSString(dataNSString: dataNSString) != nil {
+                                message = self.getForecastFromRawNSString(dataNSString: dataNSString)
+                            }
                             
                         }
                     }
                 }
                 
-                if message == "" {
-                    message = "The weather there couldn't be found, please try again."
-                }
-                
                 DispatchQueue.main.async(execute: {
-                    self.weatherDescription.text = message
+                    if message != nil {
+                        self.weatherDescription.text = message
+                    } else {
+                        self.weatherDescription.text = "Couldn't get weather for that location."
+                    }
                 })
             }
             myTask.resume()
-                
-        } else {
-            weatherDescription.text = "Couldn't get valid location."
         }
-
     }
     
     
@@ -97,31 +83,16 @@ class ViewController: UIViewController {
         } else { return nil }
     }
     
-     /*
-    func getWeatherData(url: URL) -> String? {
-        let request = NSMutableURLRequest(url: url)
-        var dataNSString = NSString()
+    
+    func getRawNSStringFromURL(url: URL) -> String? {
         
-        let task = URLSession.shared.dataTask(with: request as URLRequest) {
-            data, response, error in
-            
-            if error != nil {
-                print(error!)
-            } else {
-                if let unwrappedData = data {
-                    dataNSString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)!
-                    let dataString = dataNSString as String
-                } else {
-                    print("could not get unwrapped data from URLSession dataTask")
-                }
-            }
-        }
-        task.resume()
+        return nil
+
     }
-    */
-    func getForecastFromData(dataNSString: NSString) -> String {
+ 
+    func getForecastFromRawNSString(dataNSString: NSString) -> String? {
         if dataNSString.contains("The page you were looking for doesn't exist (404)") {
-            return "Not a valid location."
+            return nil
         } else {
             var separatorString = "3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">" // code directly before forecast
             
@@ -133,14 +104,10 @@ class ViewController: UIViewController {
                     return newContentArray[0].replacingOccurrences(of: "&deg;", with: "°") as String
                 }
             }
-            return ""
+            return nil
         }
     }
-    /*
-    func displayWeatherDescription(webForecast: String) {
-        weatherDescription.text = webForecast
-    }
-    */
+
     
     
     
